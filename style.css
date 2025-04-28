@@ -1,0 +1,84 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #eef2f3, #8e9eab);
+    color: #2c3e50;
+    text-align: center;
+}
+
+header {
+    background: #1f4068;
+    color: #fff;
+    padding: 30px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+h2 {
+    margin: 30px 0 20px 0;
+    font-weight: 600;
+}
+
+section {
+    background: #ffffffcc;
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    margin: 40px auto;
+    padding: 20px;
+    width: 90%;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+#map, #heatmap {
+    width: 100%;
+    height: 600px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border: none;
+}
+
+#barGraphCanvas, #d3-bubble-chart, #causeDonutChart {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+#yearSlider {
+    width: 50%;
+    margin: 20px 0;
+}
+
+#legend {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    background: rgba(44, 62, 80, 0.9);
+    color: #ecf0f1;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#cause-piechart-section {
+    margin: 60px auto;
+    width: 60%;
+}

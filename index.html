@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Earthquake Visualizations</title>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Global Earthquake Visualization</h1>
+    </header>
+
+    <main>
+        <section id="map-section" data-aos="fade-up">
+            <h2>Select Year to View Earthquakes</h2>
+            <input type="range" id="yearSlider" min="1900" max="2025" value="2000" step="1" />
+            <p>Showing Earthquakes for Year: <span id="selectedYear">2000</span></p>
+            <div id="map"></div>
+            <div id="legend">
+                <p><span style="color:green;">&#9679;</span> Low (Mag < 4)</p>
+                <p><span style="color:blue;">&#9679;</span> Strong (Mag 4 - 6.9)</p>
+                <p><span style="color:red;">&#9679;</span> Destructive (Mag ≥ 7)</p>
+            </div>
+        </section>
+
+        <section id="heatmap-section" data-aos="fade-up">
+            <h2>Global Earthquake Heatmap</h2>
+            <div id="heatmap"></div>
+        </section>
+
+        <section id="bargraph-section" data-aos="fade-up">
+            <h2>Earthquake Severity Distribution</h2>
+            <canvas id="barGraphCanvas" width="600" height="400"></canvas>
+        </section>
+
+        <section id="d3-bubblechart-section" data-aos="fade-up">
+            <h2>Top 15 Most Powerful Earthquakes</h2>
+            <div id="d3-bubble-chart"></div>
+        </section>
+
+        <section id="cause-piechart-section" data-aos="fade-up">
+            <h2>Causes of Seismic Events</h2>
+            <canvas id="causeDonutChart" width="500" height="500"></canvas>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>
